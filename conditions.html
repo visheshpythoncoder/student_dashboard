@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Educare Web Design</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'conditions.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    
+  </head>
+  <body>
+    <div class="termsAndConditions fadeIn">
+      <h1 class="termsAndConditionsHeading">Terms Of Service</h1>
+      <h4 class="EducareWelcome">Welcome to Educare</h4>
+      <p class="termsParagraphIntro">Welcome to Educare! Our platform is designed for collaborative project work, and by using our services, you agree to adhere to the following terms and conditions. These terms govern your use of Educare, its applications, products, and services. We encourage respectful communication, inclusivity, and a collaborative spirit among users. Discrimination, harassment, and dishonest behavior are strictly prohibited. Users are responsible for the security of their accounts, and any violations should be promptly reported. Consequences for violations may include warnings, suspensions, or removal from the platform. Educare reserves the right to update these terms, and users are responsible for reviewing and accepting any changes. Thank you for choosing Educare for your college projects, and if you have any questions, feel free to reach out through the provided channels." <br><br>
+        Would appreciate you visiting Educare.com.au 
+      </p>    
+      <div class="serviceLeadingSection">
+        <h4><span class="sn blue">1.</span><span class="st blue">Project Guidelines</span></h4>
+        <p class="spl">By using our platform, you agree to adhere to the project guidelines outlined by Educare. These guidelines include but are not limited to the proper conduct and ethical considerations during collaborative project work.:</p>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Collaboration Rules</h6>
+          <p class="serviceDetails">This plateform encourages a collaborative environment. Users must respect the ideas and contributions of others. Any form of harassment, discrimination, or disrespectful behavior will not be tolerated.</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Submission Requirements</h6>
+          <p class="serviceDetails">Projects must be submitted according to the specified requirements and deadlines. Failure to comply may result in consequences outlined in the project guidelines.</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Intellectual Property</h6>
+          <p class="serviceDetails">Intellectual Property</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Some service info</h6>
+          <p class="serviceDetails">Users retain intellectual property rights for their individual contributions. However, collaborative project outcomes may be subject to shared intellectual property agreements, as outlined in specific project guidelines.</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Feedback and Evaluation</h6>
+          <p class="serviceDetails">Constructive feedback is essential for the improvement of projects. Users should be open to feedback and participate in the evaluation process as outlined by the project guidelines.</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Project Completion</h6>
+          <p class="serviceDetails">Upon completion of a project, users are expected to fulfill any specified requirements, such as documentation, presentations, or other deliverables, as outlined in the project guidelines</p>
+          <div class="secionLine lineColorBlue"></div>
+        </div>                                 
+      </div>
+
+      <div class="serviceLeadingSection">
+        <h4><span class="sn orange">2.</span><span class="st orange">Additional Policies</span></h4>
+        <p class="spl">Users are accountable for their actions on the platform. Any violation of these terms may result in appropriate actions, including but not limited to warnings, suspensions, or account termination.</p>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Privacy</h6>
+          <p class="serviceDetails">Educare values user privacy. Please refer to our Privacy Policy for information on how your data is collected, used, and protected.
+
+By using Educare, you acknowledge that you have read, understood, and agreed to these Terms of Service. If you do not agree with any part of these terms, you may not use our services.</p>
+         
+          <div class="secionLine lineColorOrange"></div>
+        </div>                   
+      </div>
+      <div class="serviceLeadingSection">
+        <h4><span class="sn lightGreen">3.</span><span class="st lightGreen">User Responsibilities</span></h4>
+        <p class="spl">Users are responsible for maintaining the security of their accounts. Sharing login credentials or any other security compromise is against our policies.</p>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Reporting Violations</h6>
+          <p class="serviceDetails">If users witness or experience any violations of these terms, they are encouraged to report such incidents promptly through the appropriate channels provided by Educare.</p>
+          <div class="secionLine lineColorGreen"></div>
+        </div>
+        <div class="serviceInfoContainer">
+          <h6 class="serviceLead">Amendments and Updates</h6>
+          <p class="serviceDetails">Educare reserves the right to update or amend these Terms of Service. Users will be notified of any changes, and it is their responsibility to review the updated terms. Continued use of the platform after updates constitutes acceptance of the revised terms.
+
+By using Educare's services for your college projects, you agree to abide by these terms and conditions. If you have any questions or concerns, please reach out to us through the provided channels.
+
+Thank you for choosing Educare for your collaborative projects!</p>
+           
+          <div class="secionLine lineColorPurple"></div>
+        </div>        
+      </div>    
+      <h4 class="closeTerms">CLOSE TERMS AND CONDITIONS</h4>
+      <a class="button1" href="{% url 'signup_user' %}">Go Back to Signup Page</a>
+    </div>
+  </body>
+</html>

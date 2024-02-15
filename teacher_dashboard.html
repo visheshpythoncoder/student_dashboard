@@ -1,0 +1,111 @@
+{%extends 'base.html' %}
+
+{% block content%}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'teacher_dashboard.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<div class="dash">
+        <h2>Student Projects</h2>
+
+        <div class="section1">
+                <table id="studentTable">
+                        <head>
+                                <tr>
+                                        <th>Roll Number</th>
+                                        <th>Name</th>
+                                        <th>Project Name</th>
+                                        <th>Project Link</th>
+                                        <th>Project Report</th>
+                                        <th>Comment</th>
+                                        <th>Teacher's Comment</th>
+                                        <th>Action</th>
+                                </tr>
+                        </head>
+                        <tbody>
+                                <!-- Student rows will be dynamically added here -->
+                        </tbody>
+                </table>
+        </div>
+        <div class="section2">
+                <form id="studentForm">
+                        <label for="rollNumber">Roll Number:</label>
+                        <input type="text" id="rollNumber" name="rollNumber" required><br>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br>
+
+                        <label for="projectName">Project Name:</label>
+                        <input type="text" id="projectName" name="projectName" required><br>
+
+                        <label for="projectLink">Project Link:</label>
+                        <input type="url" id="projectLink" name="projectLink" required><br>
+
+                        <label for="projectReport">Project Report:</label>
+                        <input type="file" id="projectReport" name="projectReport" accept=".pdf"><br>
+
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment"></textarea><br>
+
+                        <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+        </div>
+</div>
+<script>
+        function submitForm() {
+                var rollNumber = document.getElementById("rollNumber").value;
+                var name = document.getElementById("name").value;
+                var projectName = document.getElementById("projectName").value;
+                var projectLink = document.getElementById("projectLink").value;
+                var projectReport = document.getElementById("projectReport").value;
+                var comment = document.getElementById("comment").value;
+
+                var table = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+                var newRow = table.insertRow(table.rows.length);
+
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                var cell5 = newRow.insertCell(4);
+                var cell6 = newRow.insertCell(5);
+                var cell7 = newRow.insertCell(6);
+                var cell8 = newRow.insertCell(7);
+
+                cell1.innerHTML = rollNumber;
+                cell2.innerHTML = name;
+                cell3.innerHTML = projectName;
+                cell4.innerHTML = `<a href="${projectLink}" target="_blank">Link</a>`;
+                cell5.innerHTML = `<a href="${projectReport}" target="_blank">Report</a>`;
+                cell6.innerHTML = comment;
+                cell7.innerHTML = '<input></input>';
+                cell8.innerHTML = '<button onclick="updateInfo(this)">Submit</button>';
+
+                // Clear form fields after submission
+                document.getElementById("studentForm").reset();
+
+                // Change the background color of the newly added row to a light color
+                newRow.style.backgroundColor = getLightColor();
+        }
+
+        function updateInfo(button) {
+                var row = button.parentNode.parentNode;
+                var teacherComment = prompt("Enter updated Teacher's Comment:");
+                row.cells[6].innerHTML = teacherComment;
+
+                // Change the background color of the updated row to a light color
+                row.style.backgroundColor = getLightColor();
+        }
+
+        // Function to generate a random light color
+        function getLightColor() {
+                var letters = '89ABCDEF';  // Exclude darker shades
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * letters.length)];
+                }
+                return color;
+        }
+</script>
+
+{% endblock %}

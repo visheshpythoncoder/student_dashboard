@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Educare</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+        
+        <section>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span>
+                <form class="signin" method="POST">
+                        <div class="content">
+                                <h2>Sign In</h2>
+                                <form method="POST">
+                                        {% csrf_token %}
+                                        <div class="form">
+                                                <div class="inputBox">
+                                                        <input type="text" name="username" required>
+                                                        <i>Username</i>
+                                                </div>
+                                                <div class="inputBox">
+                                                        <input type="password" name="pass" required>
+                                                        <i>Password</i>
+                                                </div>
+                                                <div class="links">
+                                                        <a href="{% url 'forget_password' %}">Forgot Password</a>
+                                                        <a href="{% url 'signup_user' %}">Signup</a>
+                                                </div>
+                                                <div class="inputBox">
+                                                        <input type="submit" value="LOG IN" onclick="validateLogin()">
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                </form>
+        </section>
+</body>
+<script>
+    {% if show_alert %}
+        alert("Invalid username or password. Please try again.");
+    {% endif %}
+</script>
+</html>

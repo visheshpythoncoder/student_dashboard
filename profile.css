@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+.box-container {
+        display: flex;
+        z-index: 1000;
+        /* background-color: #0f0; */
+        height: fit-content;
+        /* width: 80vh; */
+        left: 28.9vh; /* Add this line */
+        top: 5vh; /* Add this line */
+        backdrop-filter: blur(15px); 
+        margin-top: 2vh;
+}
+
+.card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: #141212; */
+        /* backdrop-filter: blur(35px); */
+        width: 55vh;
+        height: fit-content;
+        border-radius: 20px;
+        padding: 40px;
+        /* max-width: 45vh; */
+        /* color: rgb(13, 239, 13); */
+        font-size: 15px;
+        margin: 5px;
+        box-shadow: 0 15px 35px rgba(183, 44, 44, 0.2);
+        background-color: rgb(38, 63, 63);
+        /* margin: 5px; */
+        margin-left: 15px;
+        
+}
+#placeholder{
+        text-align: center;
+}
+.signin {
+        width: 52vh;
+        max-width: 100%;
+        /* min-height: 45vh; */
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        background-color: rgb(90, 94, 94);
+        margin: 5px;
+        margin-left: 25px;
+        height: 88vh;
+        /* width: 65vh; */
+}
+input[type="submit"] {  background: linear-gradient(to right, #292e29, #402920, #188810, #376141, #151110);
+        border: none;
+        /* background: #0df028; */
+        /* padding: 10px 20px; */
+        /* text-align: center; */
+        /* text-decoration: none; */
+        /* display: inline-block; */
+        font-size: 16px;
+        /* margin: 4px 2px; */
+        cursor: pointer;
+      }
+.photo {
+        width: 25vh;
+        height: 25vh;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #0f0;
+}
+
+.photo img {
+        width: 100%;
+        height: 100%;
+}
+
+.info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin-top: vh; */
+}
+
+.info h2 {
+        margin: 0;
+        margin-bottom: 1.5vh;
+        padding: 1.6vh;
+}
+
+.info p {
+        margin: 0;
+        margin-bottom: 1.5vh;
+        padding: 4px;
+}
+
+.about-me {
+        font-weight: bold;
+        text-align: center
+}
+
+.social-media {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+}
+
+.social-media li {
+        margin: 0 2vh;
+        padding-left: 4vh;
+        padding-right: 4vh;
+}
+
+.social-media a {
+        color: #460b0bdd;
+      
+        font-size: 2em;
+
+}
+
+.social-media a:hover {
+        
+        transition: transform 0.3s ease;
+        color: #0df028;
+        font-size: 2.5em;
+        border-radius: 50%;
+        
+}
+
+
+* {
+        box-sizing: border-box;
+        font-family: 'Quicksand', sans-serif;
+}
+
+.signin .content h2 {
+        font-size: 2em;
+        font-weight: 900;
+        color: #0f0;
+        text-align: center;
+}
+
+.signin .content .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+}
+
+.signin .content .form .inputBox {
+        position: relative;
+        width: 100%;
+        padding: 4px;
+}
+
+.row {
+        display: flex;
+}
+
+.col {
+        margin-right: 2px;
+}
+
+.signin .content .form .inputBox input {
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        border: none;
+        padding: 1.7vh 10px;
+        border-radius: 4px;
+        color: #faf7f7;
+        font-weight: 500;
+        font-size: 1em;
+}
+
+
+.inputBox input[type="submit"] {
+        
+        letter-spacing: 0.1em;
+        font-weight: bold;
+
+}
+
+input[type="submit"]:active {
+        opacity:0.4;
+}
+
+.inputBox.icon-input i {
+        position: absolute;
+        left: 20px;
+        top: 40%;
+        font-size: 1.2em;
+        color: #250909;
+        transition: 0.3s;
+}

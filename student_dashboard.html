@@ -1,0 +1,63 @@
+{%extends 'base.html' %}
+
+{% block content%}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'student_dashboard.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<div class="dash">
+<div class="form-container">
+    <h2>Student Form</h2>
+    <form id="studentForm">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required>
+
+        <label for="projectLink">Project Name</label>
+        <input type="url" id="projectLink" name="projectLink" required>
+
+        <label for="projectFile">Project File:</label>
+        <input type="file" id="projectFile" name="projectFile" accept=".pdf, .doc, .docx" required>
+
+        <label for="teacher">Select Teacher:</label>
+        <select id="teacher" name="teacher" required>
+            <option value="">choose name</option>
+
+            <option value="vaibhavi deshmukh">vaibhavi deshmukh</option>
+            <option value="shruti shinde">shruti shinde</option>
+            <option value="prerna dangare">prerna dangare</option>
+            <option value="nafiza khan">nafiza khan</option>
+            <option value="prajkta patil">prajkta patil</option>
+
+            <!-- Add more options as needed -->
+        </select>
+        <br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+<div id="displayDetails"></div>
+</div>
+<script>
+    function submitForm() {
+        var form = document.getElementById("studentForm");
+        var name = form.elements["name"].value;
+        var rollNumber = form.elements["rollNumber"].value;
+        var projectLink = form.elements["projectLink"].value;
+        var projectFile = form.elements["projectFile"].files[0]
+        var teacher = document.getElementById('teacher').value;
+        // Display details on the side
+        var displayDetails = document.getElementById("displayDetails");
+        displayDetails.innerHTML = `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Roll Number:</strong> ${rollNumber}</p>
+      <p><strong>Project Link:</strong> ${projectLink}</p>
+      <p><strong>Project File:</strong> ${projectFile ? projectFile.name : 'Not uploaded'}</p>
+      <p><strong>Teacher Name:</strong> ${teacher}</p>
+        `;
+    }
+</script>
+{% endblock %}

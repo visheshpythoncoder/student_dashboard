@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(21, 255, 21);
+    padding: 10px;
+}.dash {
+    background-color: transparent;
+    z-index: 1003;
+    height: 100vh;
+    width: 520vh;
+    /* left: 15px; */
+    margin-top: 8vh;
+    margin-left: 29vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    backdrop-filter: blur(5px);
+}
+h2{
+    size: 50px;
+}
+.section1{
+    backdrop-filter: blur(15px);
+    width: auto;
+    min-height: 80vh;
+}
+.section2{
+    background-color: green;
+}
+
+#studentTable{
+    background-color: aquamarine;
+    width: 100%;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#studentTable {
+    border-collapse: collapse; /* Collapse table borders for a cleaner look */
+    width: 100%; /* Make the table width 100% of its container */
+  }
+  
+  #studentTable th,
+  #studentTable td {
+    max-width: 100px;
+    border: 1px solid #ddd; /* Add borders to cells */
+    padding: 8px; /* Add some padding to cells */
+    text-align: left; /* Align text to the left */
+  }

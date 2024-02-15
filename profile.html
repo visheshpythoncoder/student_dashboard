@@ -1,0 +1,92 @@
+{%extends 'base.html' %}
+
+{% block content%}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<div class="box-container">
+        <div class="card">
+                <div class="photo">
+                        <img src="path/to/image.jpg" alt="Profile picture">
+                </div>
+                <div class="info">
+                        <h2>Name</h2>
+                        <p class="about-me" style="margin-left: 20px;"> About me: I am a web developer with a
+                                passion for creating
+                                beautiful and functional websites.</p>
+                        <div class="subinfo"><i style="padding-right: 20px;" class="fas fa-envelope"></i>
+                                Email@example.com</p>
+                                <p class="subinfo"><i class="fas fa-venus-mars"></i>
+                                        Male/Female</p>
+                                <p class="subinfo"><i class="fas fa-mobile-alt"></i>
+                                        123-456-7890</p>
+                                <p class="subinfo"><i class="fas fa-users"></i>
+                                        Role</p>
+                                <p class="subinfo"><i class="fas fa-map-marker"></i>
+                                        Location</p>
+                        </div>
+                        <ul class="social-media">
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                </div>
+        </div>
+        <div box-container2>
+                <form class="signin" method="POST" action="/contact">
+                        {% csrf_token %}
+                        <div class="content">
+                                <h2>Update Profile</h2>
+                                <div class="form">
+                                        <div class="inputBox icon-input">
+                                                <input type="text" required id="placeholder" name="name1" placeholder="Full Name"><i
+                                                        class="fa fa-user"></i>
+                                        </div>
+                                        <div class="inputBox icon-input">
+                                                <input type="email" required id="placeholder" name="email" placeholder="Email">
+                                                <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="inputBox icon-input">
+                                                <input type="text" id="placeholder" required name="contact"
+                                                        placeholder="Contact Number"><i class="fa fa-mobile"></i>
+                                        </div>
+                                        <div class="inputBox row">
+                                                <div class="col icon-input">
+                                                        <input type="number"       name="rollNumber" required id="placeholder"
+                                                                placeholder="Roll Number">
+
+                                                </div>
+                                                <div class="col icon-input">
+                                                        <input type="text" id="placeholder" name="city"
+                                                                placeholder="City name" required>
+                                                </div>
+                                        </div>
+                                        <div class="inputBox icon-input">
+                                                <input type="url" required id="placeholder" name="instagram"
+                                                        placeholder="LinkedIn URL"><i class="fa-brands fa-linkedin"></i>
+                                        </div>
+                                        
+                                        <div class="inputBox icon-input">
+                                                <input type="url" required id="placeholder" name="linkedin"
+                                                        placeholder="Instagram URL"><i
+                                                        class="fa-brands fa-instagram"></i>
+                                        </div>
+                                        <div class="inputBox icon-input">
+                                                <input type="url" required id="placeholder" name="twitter" placeholder="Twitter URL"><i
+                                                        class="fa-brands fa-twitter"></i>
+                                        </div>
+                                        <div class="userbox icon-input">
+                                                <input type="file" required>
+                                        </div>
+                                        <div class="inputBox">
+                                                <input type="submit" name="submit" value="Submit">
+                                        </div>
+                                </div>
+                        </div>
+                </form>
+        </div>
+</div>
+
+{% endblock %}
